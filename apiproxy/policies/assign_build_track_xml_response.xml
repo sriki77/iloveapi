@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="assign_build_track_xml_response">
+    <Set>
+        <Payload contentType="application/xml">
+            <tracks>
+                <track>API Best Practices</track>
+                <track>Big Data and APIs</track>
+                <track>Digital Transformation Strategy</track>
+                <track>Keynotes</track>
+                <track>Product Track</track>
+            </tracks>
+        </Payload>
+        <StatusCode>200</StatusCode>
+        <ReasonPhrase>Welcome</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

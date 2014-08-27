@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<AssignMessage async="false" continueOnError="false" enabled="true" name="assign_build_schedule_xml_response">
+<AssignMessage async="false" continueOnError="false" enabled="true" name="assign_build_loc_xml_response">
     <Set>
         <Payload contentType="application/xml">
-            <days>
-                <day>1</day>
-                <day>2</day>
-                <day>3</day>
-            </days>
+            <locations>
+                <location>Festival Pavilion</location>
+                <location>Herbst Pavilion</location>
+            </locations>
         </Payload>
         <StatusCode>200</StatusCode>
         <ReasonPhrase>Welcome</ReasonPhrase>

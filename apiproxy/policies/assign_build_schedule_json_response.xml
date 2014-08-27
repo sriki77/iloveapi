@@ -3,7 +3,7 @@
     <Set>
        <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">
             {
-                "days" : ["1","2,"3"]
+                "days" : ["1","2","3"]
             }
         </Payload>
         <StatusCode>200</StatusCode>

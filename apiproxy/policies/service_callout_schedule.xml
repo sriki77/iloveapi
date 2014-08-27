@@ -9,6 +9,8 @@
             <FormParams>
                 <FormParam name="action">get_schedule</FormParam>
                 <FormParam name="data-timestamp">{day}</FormParam>
+                <FormParam name="data-track">{data-track}</FormParam>
+                <FormParam name="data-location">{data-location}</FormParam>
             </FormParams>
         </Set>
     </Request>

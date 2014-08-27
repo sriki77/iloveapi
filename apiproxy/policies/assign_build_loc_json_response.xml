@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<AssignMessage async="false" continueOnError="false" enabled="true" name="assign_build_track_json_response">
+<AssignMessage async="false" continueOnError="false" enabled="true" name="assign_build_loc_json_response">
     <Set>
        <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">
             {
-                "tracks" : ["API Best Practices","Big Data and APIs","Digital Transformation Strategy","Keynotes","Product Track"]
+                "locations" : ["Festival Pavilion","Herbst Pavilion"]
             }
         </Payload>
         <StatusCode>200</StatusCode>

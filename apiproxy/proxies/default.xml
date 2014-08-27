@@ -8,6 +8,76 @@
         </Request>
     </PreFlow>
     <Flows>
+        <Flow name="days-track">
+            <Request>
+                <Step>
+                    <Name>extract_track</Name>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day1</Name>
+                    <Condition>day_num := "1"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day2</Name>
+                    <Condition>day_num := "2"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day3</Name>
+                    <Condition>day_num := "3"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day3</Name>
+                    <Condition>day_num := "3"</Condition>
+                </Step>
+                <Step>
+                    <Name>js_set_loc_track</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>service_callout_schedule</Name>
+                </Step>
+                <Step>
+                    <Name>js_build_session_response</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/schedule/day/*/track/*&quot;)</Condition>
+        </Flow>
+        <Flow name="days-location">
+            <Request>
+                <Step>
+                    <Name>extract_location</Name>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day1</Name>
+                    <Condition>day_num := "1"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day2</Name>
+                    <Condition>day_num := "2"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day3</Name>
+                    <Condition>day_num := "3"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day3</Name>
+                    <Condition>day_num := "3"</Condition>
+                </Step>
+                <Step>
+                    <Name>js_set_loc_track</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>service_callout_schedule</Name>
+                </Step>
+                <Step>
+                    <Name>js_build_session_response</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/schedule/day/*/location/*&quot;)</Condition>
+        </Flow>
         <Flow name="days">
             <Request>
                 <Step>
@@ -52,6 +122,32 @@
                 </Step>
             </Response>
             <Condition>(proxy.pathsuffix MatchesPath &quot;/schedule&quot;)</Condition>
+        </Flow>
+        <Flow name="tracks">
+            <Response>
+                <Step>
+                    <Name>assign_build_track_xml_response</Name>
+                    <Condition>local_format := "xml"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_build_track_json_response</Name>
+                    <Condition>local_format := "json"</Condition>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/schedule/tracks&quot;)</Condition>
+        </Flow>
+        <Flow name="locations">
+            <Response>
+                <Step>
+                    <Name>assign_build_loc_xml_response</Name>
+                    <Condition>local_format := "xml"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_build_loc_json_response</Name>
+                    <Condition>local_format := "json"</Condition>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/schedule/locations&quot;)</Condition>
         </Flow>
         <Flow name="summary">
             <Request/>

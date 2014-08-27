@@ -21,6 +21,14 @@
         <Value>1410134400000</Value>
     </AssignVariable>
     <AssignVariable>
+        <Name>data-track</Name>
+        <Value>0</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>data-location</Name>
+        <Value>0</Value>
+    </AssignVariable>
+    <AssignVariable>
         <Name>local_format</Name>
         <Ref>request.queryparam.format</Ref>
         <Value>json</Value>

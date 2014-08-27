@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="extract_location">
+    <URIPath>
+        <Pattern ignoreCase="true">/schedule/day/{day_num}/location/{location}</Pattern>
+    </URIPath>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+</ExtractVariables>
