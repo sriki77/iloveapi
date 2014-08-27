@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="assign_init_variables">
+    <AssignVariable>
+        <Name>EMPTY</Name>
+        <Value/>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>day1</Name>
+        <Value>1410134400000</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>day2</Name>
+        <Value>1410220800000</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>day3</Name>
+        <Value>1410307200000</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>day</Name>
+        <Value>1410134400000</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>local_format</Name>
+        <Ref>request.queryparam.format</Ref>
+        <Value>json</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>
+

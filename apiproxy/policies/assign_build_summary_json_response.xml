@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="assign_build_summary_json_response">
+    <Set>
+       <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">
+            {
+                "Conference": "I ❤Love❤ APIS",
+                "When": "Monday, September 8, 2014 at 5:00 PM - Wednesday, September 10, 2014 at 2:00 PM (PDT)",
+                "Where" : "Fort Mason Center,2 Marina Boulevard,San Francisco, CA 94123"
+                "Organizer" : "Apigee",
+                "Register" : "http://iloveapis2014.com/"
+            }
+        </Payload>
+        <StatusCode>200</StatusCode>
+        <ReasonPhrase>Welcome</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

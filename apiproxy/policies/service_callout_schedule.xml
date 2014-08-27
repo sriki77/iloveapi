@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceCallout name="service_callout_schedule" continueOnError="true">
+    <HTTPTargetConnection>
+        <URL>http://iloveapis2014.com/wp-admin/admin-ajax.php</URL>
+    </HTTPTargetConnection>
+    <Request clearPayload="true" variable="schedule_request">
+        <Set>
+            <Verb>POST</Verb>
+            <FormParams>
+                <FormParam name="action">get_schedule</FormParam>
+                <FormParam name="data-timestamp">{day}</FormParam>
+            </FormParams>
+        </Set>
+    </Request>
+    <Response>schedule_response</Response>
+</ServiceCallout>

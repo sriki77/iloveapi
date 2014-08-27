@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="extract_sessions">
+    <Source clearPayload="false">response.content</Source>
+    <JSONPayload>
+        <Variable name="sessions">
+            <JSONPath>$.sessions</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+</ExtractVariables>

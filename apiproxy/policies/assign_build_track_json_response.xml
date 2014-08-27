@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="assign_build_track_json_response">
+    <Set>
+       <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">
+            {
+                "tracks" : ["1","2,"3","4"]
+            }
+        </Payload>
+        <StatusCode>200</StatusCode>
+        <ReasonPhrase>Welcome</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

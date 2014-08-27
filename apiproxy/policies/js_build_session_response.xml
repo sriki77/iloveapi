@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript timeLimit="1000" enabled="true" continueOnError="true" async="false" name="js_build_session_response">
+    <ResourceURL>jsc://js_build_session_response.js</ResourceURL>
+</Javascript>

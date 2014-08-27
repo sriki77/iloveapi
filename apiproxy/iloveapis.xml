@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="iloveapis">
+    <ConfigurationVersion minorVersion="0" majorVersion="4"/>
+    <CreatedBy>Srikanth</CreatedBy>
+    <Description>API for iloveapis conference 2014</Description>
+    <DisplayName>I Love APIS 2014</DisplayName>
+</APIProxy>

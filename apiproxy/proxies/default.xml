@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <PreFlow>
+        <Request>
+            <Step>
+                <Name>assign_init_variables</Name>
+            </Step>
+        </Request>
+    </PreFlow>
+    <Flows>
+        <Flow name="days">
+            <Request>
+                <Step>
+                    <Name>extract_day</Name>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day1</Name>
+                    <Condition>day_num := "1"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day2</Name>
+                    <Condition>day_num := "2"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day3</Name>
+                    <Condition>day_num := "3"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_day_to_day3</Name>
+                    <Condition>day_num := "3"</Condition>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>service_callout_schedule</Name>
+                </Step>
+                <Step>
+                    <Name>js_build_session_response</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/schedule/day/*&quot;)</Condition>
+        </Flow>
+        <Flow name="schedule">
+            <Response>
+                <Step>
+                    <Name>assign_build_schedule_xml_response</Name>
+                    <Condition>local_format := "xml"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_build_schedule_json_response</Name>
+                    <Condition>local_format := "json"</Condition>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/schedule&quot;)</Condition>
+        </Flow>
+        <Flow name="summary">
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>assign_build_summary_xml_response</Name>
+                    <Condition>local_format := "xml"</Condition>
+                </Step>
+                <Step>
+                    <Name>assign_build_summary_json_response</Name>
+                    <Condition>local_format := "json"</Condition>
+                </Step>
+            </Response>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/iloveapis</BasePath>
+        <VirtualHost>default</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="dead-end"/>
+</ProxyEndpoint>

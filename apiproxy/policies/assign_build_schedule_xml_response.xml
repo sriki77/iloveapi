@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="assign_build_schedule_xml_response">
+    <Set>
+        <Payload contentType="application/xml">
+            <Days>
+                <Day>1</Day>
+                <Day>2</Day>
+                <Day>3</Day>
+            </Days>
+        </Payload>
+        <StatusCode>200</StatusCode>
+        <ReasonPhrase>Welcome</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>
