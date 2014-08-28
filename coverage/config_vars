@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#===========================================
+# Edit this section only
+
+# Proxy Env Configuration
+export org=sriki77 #Org name
+export api=iloveapis #API proxy name
+export env=test # Env name
+export rev=7 # API Proxy revision for instrumentation
+
+#Credentials
+export username=$USER #Username
+export password=$PASS #password
+
+#Report directory
+export report_dir=coverage_report # report directory
+#===========================================
