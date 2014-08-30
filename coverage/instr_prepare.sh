@@ -6,7 +6,7 @@ echo "Downloading API Bundle $api revision $rev"
 curl -u $username:$password -o "$api-$rev.zip" "https://api.enterprise.apigee.com/v1/o/$org/apis/$api/revisions/$rev/?format=bundle"
 
 echo "Instrumenting $api bundle"
-/opt/jdk/jdk1.8.latest/bin/java -jar apc-1.0.jar -z "$api-$rev.zip"
+/opt/jdk/jdk8.latest/bin/java -jar apc-1.0.jar -z "$api-$rev.zip"
 
 echo "Deploying Instrumented $api bundle"
 ./deploy.py -n $api -u $username:$password -o $org  -e $env -z $api-${rev}_instr.zip
